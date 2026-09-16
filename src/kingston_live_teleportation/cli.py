@@ -5,6 +5,14 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from .followup_workflow import (
+    FOLLOWUP_HARD_MAX_QPU_SECONDS,
+    FOLLOWUP_SHOTS,
+    preflight_followup,
+    run_followup_hardware,
+    simulate_followup,
+)
+from .verification import verify_results
 from .workflow import (
     HARD_MAX_QPU_SECONDS,
     preflight,
@@ -89,6 +97,44 @@ def build_parser() -> argparse.ArgumentParser:
     sequence.add_argument("--max-qpu-seconds", type=int, default=5)
     sequence.add_argument("--output-root", type=Path, default=Path("runs"))
     sequence.add_argument("--submit", action="store_true")
+
+    followup_sim = subparsers.add_parser(
+        "simulate-followup", help="run the frozen KLT-002 design on Aer"
+    )
+    followup_sim.add_argument("--shots", type=int, default=4096)
+    followup_sim.add_argument("--seed", type=int, default=260915)
+    followup_sim.add_argument(
+        "--output-root",
+        type=Path,
+        default=Path("followups/klt-002-delay-corrections/artifacts"),
+    )
+
+    for name, help_text in (
+        ("preflight-followup", "read-only KLT-002 backend and ISA audit"),
+        ("run-followup", "submit the frozen, capped KLT-002 hardware job"),
+    ):
+        followup = subparsers.add_parser(name, help=help_text)
+        followup.add_argument("--backend", default="ibm_kingston")
+        followup.add_argument("--instance", default="QEC")
+        followup.add_argument(
+            "--physical-qubits", type=int, nargs=3, default=[147, 148, 149]
+        )
+        followup.add_argument("--shots", type=int, default=FOLLOWUP_SHOTS)
+        followup.add_argument(
+            "--max-qpu-seconds", type=int, default=FOLLOWUP_HARD_MAX_QPU_SECONDS
+        )
+        followup.add_argument(
+            "--output-root",
+            type=Path,
+            default=Path("followups/klt-002-delay-corrections/artifacts"),
+        )
+        if name == "run-followup":
+            followup.add_argument("--submit", action="store_true")
+
+    verify = subparsers.add_parser(
+        "verify-results", help="offline integrity and result regeneration audit"
+    )
+    verify.add_argument("--repo-root", type=Path, default=Path("."))
     return parser
 
 
@@ -147,6 +193,37 @@ def main() -> None:
         )
         print(f"Sequence diagnostic complete: {run_dir}")
         print(f"IBM job ID: {job_id}")
+    elif args.command == "simulate-followup":
+        run_dir = simulate_followup(args.output_root, args.shots, args.seed)
+        print(f"KLT-002 simulation complete; no QPU submission: {run_dir}")
+    elif args.command == "preflight-followup":
+        run_dir = preflight_followup(
+            args.output_root,
+            backend_name=args.backend,
+            instance=args.instance,
+            physical_qubits=args.physical_qubits,
+            shots=args.shots,
+            max_qpu_seconds=args.max_qpu_seconds,
+        )
+        print(f"KLT-002 preflight complete; no QPU submission: {run_dir}")
+    elif args.command == "run-followup":
+        run_dir, job_id = run_followup_hardware(
+            args.output_root,
+            backend_name=args.backend,
+            instance=args.instance,
+            physical_qubits=args.physical_qubits,
+            shots=args.shots,
+            max_qpu_seconds=args.max_qpu_seconds,
+            submit=args.submit,
+        )
+        print(f"KLT-002 hardware run complete: {run_dir}")
+        print(f"IBM job ID: {job_id}")
+    elif args.command == "verify-results":
+        result = verify_results(args.repo_root)
+        print(
+            f"Verified {result['files_verified']} files, exact analysis "
+            f"regeneration, and {result['total_qpu_seconds']} total QPU seconds."
+        )
 
 
 if __name__ == "__main__":

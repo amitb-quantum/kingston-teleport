@@ -1,0 +1,479 @@
+{
+  "circuits": [
+    {
+      "axis": "Z",
+      "eigenvalue": 1,
+      "mode": "direct",
+      "name": "klt002__direct__0__z",
+      "state": "0"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": -1,
+      "mode": "direct",
+      "name": "klt002__direct__1__z",
+      "state": "1"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": 1,
+      "mode": "direct",
+      "name": "klt002__direct__plus__x",
+      "state": "+"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": -1,
+      "mode": "direct",
+      "name": "klt002__direct__minus__x",
+      "state": "-"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": 1,
+      "mode": "direct",
+      "name": "klt002__direct__plusi__y",
+      "state": "+i"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": -1,
+      "mode": "direct",
+      "name": "klt002__direct__minusi__y",
+      "state": "-i"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": 1,
+      "mode": "none",
+      "name": "klt002__none__0__z",
+      "state": "0"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": -1,
+      "mode": "none",
+      "name": "klt002__none__1__z",
+      "state": "1"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": 1,
+      "mode": "none",
+      "name": "klt002__none__plus__x",
+      "state": "+"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": -1,
+      "mode": "none",
+      "name": "klt002__none__minus__x",
+      "state": "-"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": 1,
+      "mode": "none",
+      "name": "klt002__none__plusi__y",
+      "state": "+i"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": -1,
+      "mode": "none",
+      "name": "klt002__none__minusi__y",
+      "state": "-i"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": 1,
+      "mode": "x_only",
+      "name": "klt002__x_only__0__z",
+      "state": "0"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": -1,
+      "mode": "x_only",
+      "name": "klt002__x_only__1__z",
+      "state": "1"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": 1,
+      "mode": "x_only",
+      "name": "klt002__x_only__plus__x",
+      "state": "+"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": -1,
+      "mode": "x_only",
+      "name": "klt002__x_only__minus__x",
+      "state": "-"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": 1,
+      "mode": "x_only",
+      "name": "klt002__x_only__plusi__y",
+      "state": "+i"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": -1,
+      "mode": "x_only",
+      "name": "klt002__x_only__minusi__y",
+      "state": "-i"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": 1,
+      "mode": "z_only",
+      "name": "klt002__z_only__0__z",
+      "state": "0"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": -1,
+      "mode": "z_only",
+      "name": "klt002__z_only__1__z",
+      "state": "1"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": 1,
+      "mode": "z_only",
+      "name": "klt002__z_only__plus__x",
+      "state": "+"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": -1,
+      "mode": "z_only",
+      "name": "klt002__z_only__minus__x",
+      "state": "-"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": 1,
+      "mode": "z_only",
+      "name": "klt002__z_only__plusi__y",
+      "state": "+i"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": -1,
+      "mode": "z_only",
+      "name": "klt002__z_only__minusi__y",
+      "state": "-i"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": 1,
+      "mode": "both",
+      "name": "klt002__both__0__z",
+      "state": "0"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": -1,
+      "mode": "both",
+      "name": "klt002__both__1__z",
+      "state": "1"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": 1,
+      "mode": "both",
+      "name": "klt002__both__plus__x",
+      "state": "+"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": -1,
+      "mode": "both",
+      "name": "klt002__both__minus__x",
+      "state": "-"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": 1,
+      "mode": "both",
+      "name": "klt002__both__plusi__y",
+      "state": "+i"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": -1,
+      "mode": "both",
+      "name": "klt002__both__minusi__y",
+      "state": "-i"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": 1,
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__0__z",
+      "state": "0"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": -1,
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__1__z",
+      "state": "1"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": 1,
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__plus__x",
+      "state": "+"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": -1,
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__minus__x",
+      "state": "-"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": 1,
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__plusi__y",
+      "state": "+i"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": -1,
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__minusi__y",
+      "state": "-i"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": 1,
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__0__z",
+      "state": "0"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": -1,
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__1__z",
+      "state": "1"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": 1,
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__plus__x",
+      "state": "+"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": -1,
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__minus__x",
+      "state": "-"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": 1,
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__plusi__y",
+      "state": "+i"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": -1,
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__minusi__y",
+      "state": "-i"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": 1,
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__0__z",
+      "state": "0"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": -1,
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__1__z",
+      "state": "1"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": 1,
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__plus__x",
+      "state": "+"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": -1,
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__minus__x",
+      "state": "-"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": 1,
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__plusi__y",
+      "state": "+i"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": -1,
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__minusi__y",
+      "state": "-i"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": 1,
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__0__z",
+      "state": "0"
+    },
+    {
+      "axis": "Z",
+      "eigenvalue": -1,
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__1__z",
+      "state": "1"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": 1,
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__plus__x",
+      "state": "+"
+    },
+    {
+      "axis": "X",
+      "eigenvalue": -1,
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__minus__x",
+      "state": "-"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": 1,
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__plusi__y",
+      "state": "+i"
+    },
+    {
+      "axis": "Y",
+      "eigenvalue": -1,
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__minusi__y",
+      "state": "-i"
+    }
+  ],
+  "kind": "KLT-002 ideal simulation",
+  "protocol_id": "KLT-002",
+  "protocol_version": "1.0.0",
+  "qpu_submission_performed": false,
+  "seed": 260915,
+  "shots": 4096,
+  "software": {
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "project": "0.2.0",
+    "python": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qiskit_ibm_runtime": "0.47.0"
+  },
+  "summary": [
+    {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean_fidelity": 1.0,
+      "mode": "direct",
+      "shots_per_state": [
+        4096
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean_fidelity": 1.0,
+      "mode": "none",
+      "shots_per_state": [
+        4096
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean_fidelity": 1.0,
+      "mode": "x_only",
+      "shots_per_state": [
+        4096
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean_fidelity": 1.0,
+      "mode": "z_only",
+      "shots_per_state": [
+        4096
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean_fidelity": 1.0,
+      "mode": "both",
+      "shots_per_state": [
+        4096
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean_fidelity": 1.0,
+      "mode": "conditional_shadow",
+      "shots_per_state": [
+        4096
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean_fidelity": 1.0,
+      "mode": "delay_2us",
+      "shots_per_state": [
+        4096
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean_fidelity": 1.0,
+      "mode": "delay_4us",
+      "shots_per_state": [
+        4096
+      ]
+    },
+    {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean_fidelity": 1.0,
+      "mode": "delay_8us",
+      "shots_per_state": [
+        4096
+      ]
+    }
+  ]
+}

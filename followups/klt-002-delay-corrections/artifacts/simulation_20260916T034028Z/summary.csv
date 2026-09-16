@@ -1,0 +1,10 @@
+mode,mean_fidelity,ci95_low,ci95_high,shots_per_state
+direct,1.0,1.0,1.0,[4096]
+none,1.0,1.0,1.0,[4096]
+x_only,1.0,1.0,1.0,[4096]
+z_only,1.0,1.0,1.0,[4096]
+both,1.0,1.0,1.0,[4096]
+conditional_shadow,1.0,1.0,1.0,[4096]
+delay_2us,1.0,1.0,1.0,[4096]
+delay_4us,1.0,1.0,1.0,[4096]
+delay_8us,1.0,1.0,1.0,[4096]

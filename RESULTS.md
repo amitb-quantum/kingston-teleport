@@ -3,7 +3,7 @@
 Run date: 2026-09-15/16 UTC
 Backend: `ibm_kingston` (Heron R2)
 Physical chain: `[147, 148, 149]`
-Protocol: `0.1.0`
+Protocol: `KLT-001 v1.0.0` (original software release `0.1.0`)
 
 ## Headline result
 
@@ -15,13 +15,14 @@ point estimate is below it.
 
 This is not a failure of the underlying teleportation correlations. Applying
 the Pauli-frame corrections offline to the matched uncorrected shots produced
-mean fidelity `0.9512 [0.9456, 0.9564]`; the direct preparation/readout control
-was `0.9937 [0.9915, 0.9956]`. The uncorrected negative control was
+mean fidelity `0.9512 [0.9456, 0.9564]`; the transpiled direct output-qubit
+computational-basis SPAM/readout baseline was `0.9937 [0.9915, 0.9956]`. The
+uncorrected negative control was
 `0.5018 [0.4894, 0.5143]` as expected.
 
 | Estimator | Mean fidelity | 95% interval |
 |---|---:|---:|
-| Direct control | 0.9937 | [0.9915, 0.9956] |
+| Direct output-qubit SPAM/readout baseline | 0.9937 | [0.9915, 0.9956] |
 | Dynamic feed-forward | 0.6574 | [0.6465, 0.6683] |
 | Offline correction | 0.9512 | [0.9456, 0.9564] |
 | Uncorrected control | 0.5018 | [0.4894, 0.5143] |

@@ -21,7 +21,7 @@ eigenstates, 1,024 shots per physical circuit, and no error mitigation.
 
 | Estimator | Mean fidelity | 95% interval | Interpretation |
 |---|---:|---:|---|
-| Direct | 0.9937 | [0.9915, 0.9956] | State-preparation/readout control |
+| Direct | 0.9937 | [0.9915, 0.9956] | Transpiled output-qubit SPAM/readout baseline |
 | Dynamic | 0.6574 | [0.6465, 0.6683] | Live on-device feed-forward |
 | Offline | 0.9512 | [0.9456, 0.9564] | Same Bell correlations, corrected after execution |
 | Uncorrected | 0.5018 | [0.4894, 0.5143] | Negative control |
@@ -82,7 +82,7 @@ teleportation fidelity.
 
 | Estimator | Physical procedure | Scientific role |
 |---|---|---|
-| `direct` | Prepare and measure the state directly on the output qubit | Hardware floor for preparation and readout |
+| `direct` | Prepare and measure on the output qubit; inverse rotations cancel in the transpiled positive-state circuits | Output computational-basis SPAM/readout baseline |
 | `dynamic` | Teleport and apply both corrections inside the active circuit | Primary live-feedback measurement |
 | `uncorrected` | Teleport but omit both corrections | Expected ≈0.5 negative control |
 | `offline` | Reinterpret the uncorrected joint outcomes using the Bell bits | Tests whether teleportation correlations survived |
@@ -90,6 +90,13 @@ teleportation fidelity.
 Offline correction is not operationally equivalent to live correction: it can
 recover statistics after the job, but it cannot supply a corrected quantum
 state to subsequent quantum gates.
+
+The direct estimator also needs a precise qualification. Transpilation cancels
+the preparation and measurement rotations for the positive X and Y states;
+their ISA circuits contain only terminal measurement, while negative states
+reduce to X plus measurement. Its unchanged value is therefore a strong
+output-qubit computational-basis baseline, not an independent six-state SPAM
+estimate. See [`docs/DIRECT_CONTROL_NOTE.md`](docs/DIRECT_CONTROL_NOTE.md).
 
 ## Exploratory diagnostics
 
@@ -173,9 +180,23 @@ The results should be interpreted within the following boundaries:
 - **No quantum advantage claim.** This is a control-path characterization, not
   evidence of useful fault tolerance or computational speedup.
 
-Useful next steps would be preregistered delay-matched controls, teleportation
-with only one correction enabled, alternate physical chains, a second
-calibration window, and—where available—controller timing telemetry.
+## Preregistered KLT-002 follow-up — hardware not run
+
+The repository now contains a frozen, hardware-ready follow-up that separates
+X-only, Z-only, both, and neither correction and adds a two-conditional shadow
+control plus 2, 4, and 8 μs destination delays. Six states across nine modes
+give 54 circuits at 512 shots each.
+
+The delays are deliberately called **latency-bracketing**, not delay-matched.
+The KLT-001 jobs did not request IBM's scheduler-timing metadata, and ordinary
+backend target data do not expose the complete `if_else` latency. KLT-002 is
+estimated at 11.6768 QPU seconds by IBM's quick formula and has a hard 20-second
+cap, but this repository update performs only ideal simulation and a read-only
+preflight. Review these before any separately authorized run:
+
+- [`preregistrations/KLT-002_DELAY_CORRECTION_PREREGISTRATION.md`](preregistrations/KLT-002_DELAY_CORRECTION_PREREGISTRATION.md)
+- [`docs/TIMING_AUDIT.md`](docs/TIMING_AUDIT.md)
+- [`docs/REPLICATION_PROTOCOL.md`](docs/REPLICATION_PROTOCOL.md)
 
 ## QPU usage and safeguards
 
@@ -194,6 +215,8 @@ The repository protects limited-access accounts in several ways:
 - submission requires the literal `--submit` flag;
 - the main job refuses caps above 25 QPU-seconds;
 - the diagnostics have separate hard ceilings of 8 and 5 seconds;
+- KLT-002 fixes 512 shots, estimates 11.6768 seconds, and rejects caps above
+  20 seconds;
 - IBM's server-side `max_execution_time` enforces each cap;
 - the design uses one Sampler job per stage, no Runtime session, and no
   mitigation expansion;
@@ -209,6 +232,11 @@ cap is authoritative.
 ```text
 .
 ├── PREREGISTRATION.md          Frozen hypotheses and decision rules
+├── PROVENANCE.md               Protocol IDs, commits, environments, evidence
+├── CITATION.cff                Citation metadata
+├── LICENSE                     Apache-2.0 license
+├── preregistrations/           Frozen prospective KLT-002 design
+├── docs/                       Timing, direct-control, replication notes
 ├── RESULTS.md                  Narrative result and interpretation
 ├── environment.yml             Reproducible Conda environment
 ├── pyproject.toml              Package metadata and CLI entry point
@@ -216,6 +244,9 @@ cap is authoritative.
 │   ├── circuits.py             Six-state teleportation circuits
 │   ├── analysis.py             Fidelity and bootstrap analysis
 │   ├── diagnostics.py          Post-hoc control circuits
+│   ├── followup.py             KLT-002 circuits and scoring
+│   ├── followup_workflow.py    KLT-002 simulation/preflight/gated execution
+│   ├── verification.py         Offline bundle and regeneration verifier
 │   ├── workflow.py             Simulation, preflight, capped submission
 │   └── report.py               Tables and figures
 ├── tests/                      Local unit tests
@@ -238,6 +269,7 @@ Create the environment:
 conda env create -f environment.yml
 conda activate kingston-teleport
 pytest
+kingston-teleport verify-results
 ```
 
 Run the ideal simulator without contacting IBM hardware:
@@ -272,12 +304,30 @@ Hardware execution requires a separately configured IBM Quantum account and
 may consume limited plan allocation. Reviewing `PREREGISTRATION.md` and a fresh
 preflight artifact before submission is strongly recommended.
 
+Prepare KLT-002 without using QPU time:
+
+```bash
+kingston-teleport simulate-followup
+kingston-teleport preflight-followup \
+  --backend ibm_kingston \
+  --instance QEC \
+  --physical-qubits 147 148 149 \
+  --shots 512 \
+  --max-qpu-seconds 20
+```
+
+After scientific review and only with explicit authorization, the proposed
+hardware command is the same preflight command with `run-followup` and the
+additional literal `--submit`. There is no automatic retry or resubmission.
+
 ## Reproducibility and interpretation
 
 - [`PREREGISTRATION.md`](PREREGISTRATION.md) is the frozen confirmatory design.
 - [`RESULTS.md`](RESULTS.md) records the outcome, diagnostics, and interpretation.
 - [`results/kingston-2026-09-15/`](results/kingston-2026-09-15/) contains the
   curated machine-readable evidence and SHA-256 hashes.
+- [`PROVENANCE.md`](PROVENANCE.md) binds protocol identities to the archival
+  commits and documents the required metadata for future artifacts.
 
 The principal value of this repository is the separation between three layers:
 the quantum correlations, the live control path, and the cloud service around

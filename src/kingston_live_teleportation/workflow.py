@@ -6,7 +6,7 @@ import platform
 import sys
 from dataclasses import asdict
 from pathlib import Path
-from typing import Any
+from typing import Any, Protocol
 
 import qiskit
 import qiskit_ibm_runtime
@@ -45,15 +45,31 @@ def _service(instance: str | None) -> QiskitRuntimeService:
     return QiskitRuntimeService(instance=instance) if instance else QiskitRuntimeService()
 
 
-def _extract_counts(specs: list[CircuitSpec], primitive_result) -> dict[str, dict[str, int]]:
+class NamedSpec(Protocol):
+    name: str
+
+
+def _extract_counts(specs: list[NamedSpec], primitive_result) -> dict[str, dict[str, int]]:
     counts: dict[str, dict[str, int]] = {}
     if len(primitive_result) != len(specs):
         raise ValueError(
             f"Expected {len(specs)} results, received {len(primitive_result)}"
         )
     for spec, pub_result in zip(specs, primitive_result, strict=True):
+        if spec.name in counts:
+            raise ValueError(f"Duplicate circuit name: {spec.name}")
         joint = pub_result.join_data(REGISTER_ORDER)
-        counts[spec.name] = {key: int(value) for key, value in joint.get_counts().items()}
+        raw_counts = joint.get_counts()
+        if not raw_counts:
+            raise ValueError(f"Primitive returned no counts for {spec.name}")
+        parsed: dict[str, int] = {}
+        for key, value in raw_counts.items():
+            if not isinstance(key, str):
+                raise ValueError(f"Non-string count key for {spec.name}: {key!r}")
+            if not isinstance(value, int) or isinstance(value, bool) or value <= 0:
+                raise ValueError(f"Invalid count for {spec.name}: {key}={value!r}")
+            parsed[key] = value
+        counts[spec.name] = parsed
     return counts
 
 

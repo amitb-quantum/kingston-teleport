@@ -14,19 +14,25 @@ import matplotlib.pyplot as plt  # noqa: E402
 def write_tables(run_dir: Path, analysis: dict) -> None:
     per_state = analysis["per_state"]
     with (run_dir / "per_state.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(per_state[0]))
+        writer = csv.DictWriter(
+            handle, fieldnames=list(per_state[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(per_state)
 
     summary = analysis["summary"]
     with (run_dir / "summary.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(summary[0]))
+        writer = csv.DictWriter(
+            handle, fieldnames=list(summary[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(summary)
 
     axis_summary = analysis["axis_summary"]
     with (run_dir / "axis_summary.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(axis_summary[0]))
+        writer = csv.DictWriter(
+            handle, fieldnames=list(axis_summary[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(axis_summary)
 

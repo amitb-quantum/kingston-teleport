@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or result bundle, please cite it as follows."
+title: "Kingston Live Teleportation"
+type: software
+version: 0.2.0
+date-released: 2026-09-15
+authors:
+  - family-names: Brahmbhatt
+    given-names: Amit
+    email: amitb@quantum-clarity.com
+repository-code: "https://github.com/amitb-quantum/kingston-teleport"
+url: "https://github.com/amitb-quantum/kingston-teleport"
+license: Apache-2.0
+keywords:
+  - quantum teleportation
+  - dynamic circuits
+  - IBM Quantum
+  - feed-forward
+  - reproducible research

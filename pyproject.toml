@@ -4,10 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kingston-live-teleportation"
-version = "0.1.0"
+version = "0.2.0"
 description = "Budget-capped dynamic quantum teleportation benchmark for IBM Kingston"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
+license = "Apache-2.0"
 dependencies = [
   "qiskit~=2.5.2",
   "qiskit-ibm-runtime~=0.47.0",

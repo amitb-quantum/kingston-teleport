@@ -56,10 +56,14 @@ def score_counts(
 ) -> tuple[int, int]:
     """Return successful and total shots for one circuit."""
 
+    if not counts:
+        raise ValueError(f"No shots found for {spec.name}")
     desired = 0 if spec.eigenvalue == 1 else 1
     successes = 0
     total = 0
     for key, count in counts.items():
+        if not isinstance(count, int) or isinstance(count, bool) or count <= 0:
+            raise ValueError(f"Invalid count for {spec.name}: {key}={count!r}")
         m0, m1, outcome = _decode_joint_key(key)
         if offline_correction:
             outcome ^= _offline_flip(spec.axis, m0, m1)
@@ -78,6 +82,15 @@ def analyze_counts(
     seed: int = 240915,
 ) -> dict:
     """Analyze physical modes and derive the offline-corrected estimator."""
+
+    specs = list(specs)
+    expected = {spec.name for spec in specs}
+    received = set(counts_by_name)
+    if expected != received:
+        raise ValueError(
+            f"Incomplete data; missing={sorted(expected - received)}, "
+            f"extra={sorted(received - expected)}"
+        )
 
     rows: list[dict] = []
     for spec in specs:

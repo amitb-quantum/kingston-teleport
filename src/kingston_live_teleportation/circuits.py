@@ -7,6 +7,8 @@ from typing import Literal
 
 from qiskit import ClassicalRegister, QuantumCircuit, QuantumRegister
 
+from .protocols import ORIGINAL_PROTOCOL_ID, ORIGINAL_PROTOCOL_VERSION
+
 StateName = Literal["0", "1", "+", "-", "+i", "-i"]
 AxisName = Literal["X", "Y", "Z"]
 ModeName = Literal["direct", "dynamic", "uncorrected"]
@@ -97,6 +99,8 @@ def build_circuit(
     out = ClassicalRegister(1, "out")
     circuit = QuantumCircuit(q, m0, m1, out, name=spec.name)
     circuit.metadata = {
+        "protocol_id": ORIGINAL_PROTOCOL_ID,
+        "protocol_version": ORIGINAL_PROTOCOL_VERSION,
         "mode": spec.mode,
         "state": spec.state,
         "axis": spec.axis,
