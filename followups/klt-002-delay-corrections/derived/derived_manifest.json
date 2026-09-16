@@ -1,0 +1,23 @@
+{
+  "delay_maximum_absolute_axis_difference_from_both": {
+    "delay_2us": 0.388671875,
+    "delay_4us": 0.49609375,
+    "delay_8us": 0.578125
+  },
+  "dt_seconds": 4e-09,
+  "preregistered_decisions": {
+    "H1_x_only_retains_x_more_than_z_only": false,
+    "H2_both_below_both_single_correction_means": false,
+    "H3_any_delay_within_0.03_on_every_axis": false,
+    "H4_shadow_within_0.03_on_every_axis": true
+  },
+  "shadow_absolute_axis_differences_from_both": {
+    "X": 0.0146484375,
+    "Y": 0.0283203125,
+    "Z": 0.009765625
+  },
+  "source_job_id": "dal13ss62pvc739q7gig",
+  "source_run_directory": "hardware_20260916T035011Z",
+  "timing_method": "Archived IBM scheduler events; wait is output-measurement start minus latest optimized mid-circuit capture end.",
+  "timing_state": "+"
+}

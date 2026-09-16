@@ -1,0 +1,1556 @@
+{
+  "backend": "ibm_kingston",
+  "backend_version": "1.0.0",
+  "budget": {
+    "assumptions": "no mitigation and no custom repetition delay",
+    "circuit_count": 54,
+    "estimated_qpu_seconds": 11.6768,
+    "executions": 27648,
+    "formula": "2 + 0.00035 * circuits * shots",
+    "server_side_cap_seconds": 20,
+    "shots": 512
+  },
+  "calibration_last_update": "2026-09-15 20:16:21-07:00",
+  "circuit_metrics": [
+    {
+      "delays": [],
+      "depth": 1,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "direct",
+      "name": "klt002__direct__0__z",
+      "operations": {
+        "measure": 1
+      },
+      "size": 1
+    },
+    {
+      "delays": [],
+      "depth": 2,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "direct",
+      "name": "klt002__direct__1__z",
+      "operations": {
+        "measure": 1,
+        "x": 1
+      },
+      "size": 2
+    },
+    {
+      "delays": [],
+      "depth": 1,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "direct",
+      "name": "klt002__direct__plus__x",
+      "operations": {
+        "measure": 1
+      },
+      "size": 1
+    },
+    {
+      "delays": [],
+      "depth": 2,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "direct",
+      "name": "klt002__direct__minus__x",
+      "operations": {
+        "measure": 1,
+        "x": 1
+      },
+      "size": 2
+    },
+    {
+      "delays": [],
+      "depth": 1,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "direct",
+      "name": "klt002__direct__plusi__y",
+      "operations": {
+        "measure": 1
+      },
+      "size": 1
+    },
+    {
+      "delays": [],
+      "depth": 2,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "direct",
+      "name": "klt002__direct__minusi__y",
+      "operations": {
+        "measure": 1,
+        "x": 1
+      },
+      "size": 2
+    },
+    {
+      "delays": [],
+      "depth": 13,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "none",
+      "name": "klt002__none__0__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 23
+    },
+    {
+      "delays": [],
+      "depth": 13,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "none",
+      "name": "klt002__none__1__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6,
+        "x": 1
+      },
+      "size": 24
+    },
+    {
+      "delays": [],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "none",
+      "name": "klt002__none__plus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 29
+    },
+    {
+      "delays": [],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "none",
+      "name": "klt002__none__minus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 29
+    },
+    {
+      "delays": [],
+      "depth": 15,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "none",
+      "name": "klt002__none__plusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 15,
+        "sx": 8
+      },
+      "size": 28
+    },
+    {
+      "delays": [],
+      "depth": 15,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "none",
+      "name": "klt002__none__minusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 14,
+        "sx": 8
+      },
+      "size": 27
+    },
+    {
+      "delays": [],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "x_only",
+      "name": "klt002__x_only__0__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 24
+    },
+    {
+      "delays": [],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "x_only",
+      "name": "klt002__x_only__1__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6,
+        "x": 1
+      },
+      "size": 25
+    },
+    {
+      "delays": [],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "x_only",
+      "name": "klt002__x_only__plus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "x_only",
+      "name": "klt002__x_only__minus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "x_only",
+      "name": "klt002__x_only__plusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 15,
+        "sx": 8
+      },
+      "size": 29
+    },
+    {
+      "delays": [],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "x_only",
+      "name": "klt002__x_only__minusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 14,
+        "sx": 8
+      },
+      "size": 28
+    },
+    {
+      "delays": [],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "z_only",
+      "name": "klt002__z_only__0__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 24
+    },
+    {
+      "delays": [],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "z_only",
+      "name": "klt002__z_only__1__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6,
+        "x": 1
+      },
+      "size": 25
+    },
+    {
+      "delays": [],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "z_only",
+      "name": "klt002__z_only__plus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "z_only",
+      "name": "klt002__z_only__minus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "z_only",
+      "name": "klt002__z_only__plusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 15,
+        "sx": 8
+      },
+      "size": 29
+    },
+    {
+      "delays": [],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "z_only",
+      "name": "klt002__z_only__minusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 14,
+        "sx": 8
+      },
+      "size": 28
+    },
+    {
+      "delays": [],
+      "depth": 15,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "both",
+      "name": "klt002__both__0__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 25
+    },
+    {
+      "delays": [],
+      "depth": 15,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "both",
+      "name": "klt002__both__1__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6,
+        "x": 1
+      },
+      "size": 26
+    },
+    {
+      "delays": [],
+      "depth": 18,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "both",
+      "name": "klt002__both__plus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 31
+    },
+    {
+      "delays": [],
+      "depth": 18,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "both",
+      "name": "klt002__both__minus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 31
+    },
+    {
+      "delays": [],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "both",
+      "name": "klt002__both__plusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 15,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "both",
+      "name": "klt002__both__minusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 14,
+        "sx": 8
+      },
+      "size": 29
+    },
+    {
+      "delays": [],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__0__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 25
+    },
+    {
+      "delays": [],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__1__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6,
+        "x": 1
+      },
+      "size": 26
+    },
+    {
+      "delays": [],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__plus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 31
+    },
+    {
+      "delays": [],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__minus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 31
+    },
+    {
+      "delays": [],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__plusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 15,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "conditional_shadow",
+      "name": "klt002__conditional_shadow__minusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 14,
+        "sx": 8
+      },
+      "size": 29
+    },
+    {
+      "delays": [
+        {
+          "duration": 500,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__0__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 24
+    },
+    {
+      "delays": [
+        {
+          "duration": 500,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__1__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6,
+        "x": 1
+      },
+      "size": 25
+    },
+    {
+      "delays": [
+        {
+          "duration": 500,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__plus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [
+        {
+          "duration": 500,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__minus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [
+        {
+          "duration": 500,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__plusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 15,
+        "sx": 8
+      },
+      "size": 29
+    },
+    {
+      "delays": [
+        {
+          "duration": 500,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_2us",
+      "name": "klt002__delay_2us__minusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 14,
+        "sx": 8
+      },
+      "size": 28
+    },
+    {
+      "delays": [
+        {
+          "duration": 1000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__0__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 24
+    },
+    {
+      "delays": [
+        {
+          "duration": 1000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__1__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6,
+        "x": 1
+      },
+      "size": 25
+    },
+    {
+      "delays": [
+        {
+          "duration": 1000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__plus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [
+        {
+          "duration": 1000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__minus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [
+        {
+          "duration": 1000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__plusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 15,
+        "sx": 8
+      },
+      "size": 29
+    },
+    {
+      "delays": [
+        {
+          "duration": 1000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_4us",
+      "name": "klt002__delay_4us__minusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 14,
+        "sx": 8
+      },
+      "size": 28
+    },
+    {
+      "delays": [
+        {
+          "duration": 2000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__0__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 24
+    },
+    {
+      "delays": [
+        {
+          "duration": 2000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 14,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__1__z",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6,
+        "x": 1
+      },
+      "size": 25
+    },
+    {
+      "delays": [
+        {
+          "duration": 2000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__plus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [
+        {
+          "duration": 2000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 17,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__minus__x",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "delays": [
+        {
+          "duration": 2000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__plusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 15,
+        "sx": 8
+      },
+      "size": 29
+    },
+    {
+      "delays": [
+        {
+          "duration": 2000,
+          "physical_qubit": 149,
+          "unit": "dt"
+        }
+      ],
+      "depth": 16,
+      "final_layout": [
+        147,
+        148,
+        149
+      ],
+      "initial_layout": [
+        147,
+        148,
+        149
+      ],
+      "mode": "delay_8us",
+      "name": "klt002__delay_8us__minusi__y",
+      "operations": {
+        "barrier": 2,
+        "cz": 2,
+        "delay": 1,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 14,
+        "sx": 8
+      },
+      "size": 28
+    }
+  ],
+  "dt_seconds": 4e-09,
+  "future_result_requirement": "Request experimental scheduler_timing metadata in any authorized hardware job and archive result metadata.",
+  "instance": "QEC",
+  "kind": "KLT-002 live preflight; no submission",
+  "operational": true,
+  "pending_jobs": 0,
+  "physical_qubits": [
+    147,
+    148,
+    149
+  ],
+  "protocol_id": "KLT-002",
+  "protocol_version": "1.0.0",
+  "selected_edge_calibration": {
+    "147-148": {
+      "cz_error": 0.0029396609385385353,
+      "cz_length_seconds": 6.8e-08
+    },
+    "148-149": {
+      "cz_error": 0.0018945009296274795,
+      "cz_length_seconds": 6.8e-08
+    }
+  },
+  "selected_qubit_calibration": {
+    "147": {
+      "readout_error": 0.006103515625,
+      "t1_seconds": 0.00039206022878659623,
+      "t2_seconds": 9.15492671625866e-05
+    },
+    "148": {
+      "readout_error": 0.00439453125,
+      "t1_seconds": 0.0002086811968180829,
+      "t2_seconds": 0.00020660486990531268
+    },
+    "149": {
+      "readout_error": 0.00634765625,
+      "t1_seconds": 0.0003488723608123953,
+      "t2_seconds": 0.0004421667389630859
+    }
+  },
+  "software": {
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "project": "0.2.0",
+    "python": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qiskit_ibm_runtime": "0.47.0"
+  },
+  "static_instruction_durations_seconds": {
+    "cz_ancilla_output": 6.8e-08,
+    "cz_input_ancilla": 6.8e-08,
+    "if_else": null,
+    "measure_2_input": 1.38e-06,
+    "sx_output": 3.2e-08,
+    "terminal_measure_output": 2.18e-06,
+    "x_output": 3.2e-08
+  },
+  "submission_performed": false,
+  "timing_conclusion": "The target does not expose a complete if_else/feed-forward duration. The 0/2/4/8 us controls bracket, but do not claim to match, latency."
+}

@@ -1,0 +1,959 @@
+{
+  "axis_summary": [
+    {
+      "axis": "X",
+      "mean_fidelity": 0.9931640625,
+      "mode": "direct",
+      "pauli_transfer_diagonal": 0.986328125
+    },
+    {
+      "axis": "Y",
+      "mean_fidelity": 0.994140625,
+      "mode": "direct",
+      "pauli_transfer_diagonal": 0.98828125
+    },
+    {
+      "axis": "Z",
+      "mean_fidelity": 0.9970703125,
+      "mode": "direct",
+      "pauli_transfer_diagonal": 0.994140625
+    },
+    {
+      "axis": "X",
+      "mean_fidelity": 0.9521484375,
+      "mode": "none",
+      "pauli_transfer_diagonal": 0.904296875
+    },
+    {
+      "axis": "Y",
+      "mean_fidelity": 0.63671875,
+      "mode": "none",
+      "pauli_transfer_diagonal": 0.2734375
+    },
+    {
+      "axis": "Z",
+      "mean_fidelity": 0.662109375,
+      "mode": "none",
+      "pauli_transfer_diagonal": 0.32421875
+    },
+    {
+      "axis": "X",
+      "mean_fidelity": 0.935546875,
+      "mode": "x_only",
+      "pauli_transfer_diagonal": 0.87109375
+    },
+    {
+      "axis": "Y",
+      "mean_fidelity": 0.541015625,
+      "mode": "x_only",
+      "pauli_transfer_diagonal": 0.08203125
+    },
+    {
+      "axis": "Z",
+      "mean_fidelity": 0.5615234375,
+      "mode": "x_only",
+      "pauli_transfer_diagonal": 0.123046875
+    },
+    {
+      "axis": "X",
+      "mean_fidelity": 0.9501953125,
+      "mode": "z_only",
+      "pauli_transfer_diagonal": 0.900390625
+    },
+    {
+      "axis": "Y",
+      "mean_fidelity": 0.5439453125,
+      "mode": "z_only",
+      "pauli_transfer_diagonal": 0.087890625
+    },
+    {
+      "axis": "Z",
+      "mean_fidelity": 0.5400390625,
+      "mode": "z_only",
+      "pauli_transfer_diagonal": 0.080078125
+    },
+    {
+      "axis": "X",
+      "mean_fidelity": 0.9521484375,
+      "mode": "both",
+      "pauli_transfer_diagonal": 0.904296875
+    },
+    {
+      "axis": "Y",
+      "mean_fidelity": 0.5361328125,
+      "mode": "both",
+      "pauli_transfer_diagonal": 0.072265625
+    },
+    {
+      "axis": "Z",
+      "mean_fidelity": 0.55078125,
+      "mode": "both",
+      "pauli_transfer_diagonal": 0.1015625
+    },
+    {
+      "axis": "X",
+      "mean_fidelity": 0.9375,
+      "mode": "conditional_shadow",
+      "pauli_transfer_diagonal": 0.875
+    },
+    {
+      "axis": "Y",
+      "mean_fidelity": 0.564453125,
+      "mode": "conditional_shadow",
+      "pauli_transfer_diagonal": 0.12890625
+    },
+    {
+      "axis": "Z",
+      "mean_fidelity": 0.541015625,
+      "mode": "conditional_shadow",
+      "pauli_transfer_diagonal": 0.08203125
+    },
+    {
+      "axis": "X",
+      "mean_fidelity": 0.5634765625,
+      "mode": "delay_2us",
+      "pauli_transfer_diagonal": 0.126953125
+    },
+    {
+      "axis": "Y",
+      "mean_fidelity": 0.6845703125,
+      "mode": "delay_2us",
+      "pauli_transfer_diagonal": 0.369140625
+    },
+    {
+      "axis": "Z",
+      "mean_fidelity": 0.662109375,
+      "mode": "delay_2us",
+      "pauli_transfer_diagonal": 0.32421875
+    },
+    {
+      "axis": "X",
+      "mean_fidelity": 0.4560546875,
+      "mode": "delay_4us",
+      "pauli_transfer_diagonal": -0.087890625
+    },
+    {
+      "axis": "Y",
+      "mean_fidelity": 0.3076171875,
+      "mode": "delay_4us",
+      "pauli_transfer_diagonal": -0.384765625
+    },
+    {
+      "axis": "Z",
+      "mean_fidelity": 0.6591796875,
+      "mode": "delay_4us",
+      "pauli_transfer_diagonal": 0.318359375
+    },
+    {
+      "axis": "X",
+      "mean_fidelity": 0.3740234375,
+      "mode": "delay_8us",
+      "pauli_transfer_diagonal": -0.251953125
+    },
+    {
+      "axis": "Y",
+      "mean_fidelity": 0.3515625,
+      "mode": "delay_8us",
+      "pauli_transfer_diagonal": -0.296875
+    },
+    {
+      "axis": "Z",
+      "mean_fidelity": 0.6572265625,
+      "mode": "delay_8us",
+      "pauli_transfer_diagonal": 0.314453125
+    }
+  ],
+  "bootstrap": {
+    "draws": 20000,
+    "seed": 260915
+  },
+  "per_state": [
+    {
+      "axis": "Z",
+      "ci95_high": 0.9996551422384568,
+      "ci95_low": 0.9890207217875786,
+      "circuit": "klt002__direct__0__z",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.998046875,
+      "mode": "direct",
+      "shots": 512,
+      "state": "0",
+      "successes": 511
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.9989281109196062,
+      "ci95_low": 0.9858705928553464,
+      "circuit": "klt002__direct__1__z",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.99609375,
+      "mode": "direct",
+      "shots": 512,
+      "state": "1",
+      "successes": 510
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9996551422384568,
+      "ci95_low": 0.9890207217875786,
+      "circuit": "klt002__direct__plus__x",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.998046875,
+      "mode": "direct",
+      "shots": 512,
+      "state": "+",
+      "successes": 511
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.99461842830316,
+      "ci95_low": 0.9746716344674626,
+      "circuit": "klt002__direct__minus__x",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.98828125,
+      "mode": "direct",
+      "shots": 512,
+      "state": "-",
+      "successes": 506
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.9989281109196062,
+      "ci95_low": 0.9858705928553464,
+      "circuit": "klt002__direct__plusi__y",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.99609375,
+      "mode": "direct",
+      "shots": 512,
+      "state": "+i",
+      "successes": 510
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.9969577980703441,
+      "ci95_low": 0.9800865852024436,
+      "circuit": "klt002__direct__minusi__y",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.9921875,
+      "mode": "direct",
+      "shots": 512,
+      "state": "-i",
+      "successes": 508
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.7092560441298154,
+      "ci95_low": 0.6280568977143614,
+      "circuit": "klt002__none__0__z",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.669921875,
+      "mode": "none",
+      "shots": 512,
+      "state": "0",
+      "successes": 343
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.6942059615106306,
+      "ci95_low": 0.6120896983248862,
+      "circuit": "klt002__none__1__z",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.654296875,
+      "mode": "none",
+      "shots": 512,
+      "state": "1",
+      "successes": 335
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9776481939146939,
+      "ci95_low": 0.945115945842939,
+      "circuit": "klt002__none__plus__x",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.96484375,
+      "mode": "none",
+      "shots": 512,
+      "state": "+",
+      "successes": 494
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9570204166860805,
+      "ci95_low": 0.9153406398074799,
+      "circuit": "klt002__none__minus__x",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.939453125,
+      "mode": "none",
+      "shots": 512,
+      "state": "-",
+      "successes": 481
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.6753252437525898,
+      "ci95_low": 0.5921988135721021,
+      "circuit": "klt002__none__plusi__y",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.634765625,
+      "mode": "none",
+      "shots": 512,
+      "state": "+i",
+      "successes": 325
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.6791073195122713,
+      "ci95_low": 0.5961710583145855,
+      "circuit": "klt002__none__minusi__y",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.638671875,
+      "mode": "none",
+      "shots": 512,
+      "state": "-i",
+      "successes": 327
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.6010102585908785,
+      "ci95_low": 0.5153045489415962,
+      "circuit": "klt002__x_only__0__z",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.55859375,
+      "mode": "x_only",
+      "shots": 512,
+      "state": "0",
+      "successes": 286
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.6067637744976598,
+      "ci95_low": 0.5211825137880625,
+      "circuit": "klt002__x_only__1__z",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.564453125,
+      "mode": "x_only",
+      "shots": 512,
+      "state": "1",
+      "successes": 289
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9421044962145617,
+      "ci95_low": 0.8953621180192564,
+      "circuit": "klt002__x_only__plus__x",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.921875,
+      "mode": "x_only",
+      "shots": 512,
+      "state": "+",
+      "successes": 472
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9651128189324275,
+      "ci95_low": 0.9266340388165454,
+      "circuit": "klt002__x_only__minus__x",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.94921875,
+      "mode": "x_only",
+      "shots": 512,
+      "state": "-",
+      "successes": 486
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.5740814858345139,
+      "ci95_low": 0.4879530781828059,
+      "circuit": "klt002__x_only__plusi__y",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.53125,
+      "mode": "x_only",
+      "shots": 512,
+      "state": "+i",
+      "successes": 272
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.5933295688090354,
+      "ci95_low": 0.5074765977191094,
+      "circuit": "klt002__x_only__minusi__y",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.55078125,
+      "mode": "x_only",
+      "shots": 512,
+      "state": "-i",
+      "successes": 282
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.5952507387909847,
+      "ci95_low": 0.5094325879882426,
+      "circuit": "klt002__z_only__0__z",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.552734375,
+      "mode": "z_only",
+      "shots": 512,
+      "state": "0",
+      "successes": 283
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.5702239636873305,
+      "ci95_low": 0.4840562798278243,
+      "circuit": "klt002__z_only__1__z",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.52734375,
+      "mode": "z_only",
+      "shots": 512,
+      "state": "1",
+      "successes": 270
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9570204166860805,
+      "ci95_low": 0.9153406398074799,
+      "circuit": "klt002__z_only__plus__x",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.939453125,
+      "mode": "z_only",
+      "shots": 512,
+      "state": "+",
+      "successes": 481
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9745729201347603,
+      "ci95_low": 0.9404368991207076,
+      "circuit": "klt002__z_only__minus__x",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.9609375,
+      "mode": "z_only",
+      "shots": 512,
+      "state": "-",
+      "successes": 492
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.5952507387909847,
+      "ci95_low": 0.5094325879882426,
+      "circuit": "klt002__z_only__plusi__y",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.552734375,
+      "mode": "z_only",
+      "shots": 512,
+      "state": "+i",
+      "successes": 283
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.5779363787362185,
+      "ci95_low": 0.49185250578326617,
+      "circuit": "klt002__z_only__minusi__y",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.53515625,
+      "mode": "z_only",
+      "shots": 512,
+      "state": "-i",
+      "successes": 274
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.6029287655659119,
+      "ci95_low": 0.5172632022176453,
+      "circuit": "klt002__both__0__z",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.560546875,
+      "mode": "both",
+      "shots": 512,
+      "state": "0",
+      "successes": 287
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.5837137791872614,
+      "ci95_low": 0.49770658608547097,
+      "circuit": "klt002__both__1__z",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.541015625,
+      "mode": "both",
+      "shots": 512,
+      "state": "1",
+      "successes": 277
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9651128189324275,
+      "ci95_low": 0.9266340388165454,
+      "circuit": "klt002__both__plus__x",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.94921875,
+      "mode": "both",
+      "shots": 512,
+      "state": "+",
+      "successes": 486
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9698822812409753,
+      "ci95_low": 0.9334960572612452,
+      "circuit": "klt002__both__minus__x",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.955078125,
+      "mode": "both",
+      "shots": 512,
+      "state": "-",
+      "successes": 489
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.5779363787362185,
+      "ci95_low": 0.49185250578326617,
+      "circuit": "klt002__both__plusi__y",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.53515625,
+      "mode": "both",
+      "shots": 512,
+      "state": "+i",
+      "successes": 274
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.5798628379632814,
+      "ci95_low": 0.4938032068072858,
+      "circuit": "klt002__both__minusi__y",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.537109375,
+      "mode": "both",
+      "shots": 512,
+      "state": "-i",
+      "successes": 275
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.5914077351765856,
+      "ci95_low": 0.5055212711004766,
+      "circuit": "klt002__conditional_shadow__0__z",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.548828125,
+      "mode": "conditional_shadow",
+      "shots": 512,
+      "state": "0",
+      "successes": 281
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.576009261184734,
+      "ci95_low": 0.4899024630836685,
+      "circuit": "klt002__conditional_shadow__1__z",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.533203125,
+      "mode": "conditional_shadow",
+      "shots": 512,
+      "state": "1",
+      "successes": 273
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9537408335325349,
+      "ci95_low": 0.9108659024588607,
+      "circuit": "klt002__conditional_shadow__plus__x",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.935546875,
+      "mode": "conditional_shadow",
+      "shots": 512,
+      "state": "+",
+      "successes": 479
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9570204166860805,
+      "ci95_low": 0.9153406398074799,
+      "circuit": "klt002__conditional_shadow__minus__x",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.939453125,
+      "mode": "conditional_shadow",
+      "shots": 512,
+      "state": "-",
+      "successes": 481
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.6297172333591786,
+      "ci95_low": 0.5447549779395334,
+      "circuit": "klt002__conditional_shadow__plusi__y",
+      "delay_us": 0,
+      "eigenvalue": 1,
+      "fidelity": 0.587890625,
+      "mode": "conditional_shadow",
+      "shots": 512,
+      "state": "+i",
+      "successes": 301
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.5837137791872614,
+      "ci95_low": 0.49770658608547097,
+      "circuit": "klt002__conditional_shadow__minusi__y",
+      "delay_us": 0,
+      "eigenvalue": -1,
+      "fidelity": 0.541015625,
+      "mode": "conditional_shadow",
+      "shots": 512,
+      "state": "-i",
+      "successes": 277
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.7017371709261808,
+      "ci95_low": 0.620067129913666,
+      "circuit": "klt002__delay_2us__0__z",
+      "delay_us": 2,
+      "eigenvalue": 1,
+      "fidelity": 0.662109375,
+      "mode": "delay_2us",
+      "shots": 512,
+      "state": "0",
+      "successes": 339
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.7017371709261808,
+      "ci95_low": 0.620067129913666,
+      "circuit": "klt002__delay_2us__1__z",
+      "delay_us": 2,
+      "eigenvalue": -1,
+      "fidelity": 0.662109375,
+      "mode": "delay_2us",
+      "shots": 512,
+      "state": "1",
+      "successes": 339
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.5952507387909847,
+      "ci95_low": 0.5094325879882426,
+      "circuit": "klt002__delay_2us__plus__x",
+      "delay_us": 2,
+      "eigenvalue": 1,
+      "fidelity": 0.552734375,
+      "mode": "delay_2us",
+      "shots": 512,
+      "state": "+",
+      "successes": 283
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.6163395532101633,
+      "ci95_low": 0.5309925363309714,
+      "circuit": "klt002__delay_2us__minus__x",
+      "delay_us": 2,
+      "eigenvalue": -1,
+      "fidelity": 0.57421875,
+      "mode": "delay_2us",
+      "shots": 512,
+      "state": "-",
+      "successes": 294
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.7373380582775856,
+      "ci95_low": 0.6581322873328285,
+      "circuit": "klt002__delay_2us__plusi__y",
+      "delay_us": 2,
+      "eigenvalue": 1,
+      "fidelity": 0.69921875,
+      "mode": "delay_2us",
+      "shots": 512,
+      "state": "+i",
+      "successes": 358
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.7092560441298154,
+      "ci95_low": 0.6280568977143614,
+      "circuit": "klt002__delay_2us__minusi__y",
+      "delay_us": 2,
+      "eigenvalue": -1,
+      "fidelity": 0.669921875,
+      "mode": "delay_2us",
+      "shots": 512,
+      "state": "-i",
+      "successes": 343
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.6998555170137292,
+      "ci95_low": 0.6180716235750351,
+      "circuit": "klt002__delay_4us__0__z",
+      "delay_us": 4,
+      "eigenvalue": 1,
+      "fidelity": 0.66015625,
+      "mode": "delay_4us",
+      "shots": 512,
+      "state": "0",
+      "successes": 338
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.697973095380685,
+      "ci95_low": 0.6160768849569968,
+      "circuit": "klt002__delay_4us__1__z",
+      "delay_us": 4,
+      "eigenvalue": -1,
+      "fidelity": 0.658203125,
+      "mode": "delay_4us",
+      "shots": 512,
+      "state": "1",
+      "successes": 337
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.5081474942167338,
+      "ci95_low": 0.4220636212637814,
+      "circuit": "klt002__delay_4us__plus__x",
+      "delay_us": 4,
+      "eigenvalue": 1,
+      "fidelity": 0.46484375,
+      "mode": "delay_4us",
+      "shots": 512,
+      "state": "+",
+      "successes": 238
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.49056741201175746,
+      "ci95_low": 0.40474926120901533,
+      "circuit": "klt002__delay_4us__minus__x",
+      "delay_us": 4,
+      "eigenvalue": -1,
+      "fidelity": 0.447265625,
+      "mode": "delay_4us",
+      "shots": 512,
+      "state": "-",
+      "successes": 229
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.34387849280055516,
+      "ci95_low": 0.2645283218401132,
+      "circuit": "klt002__delay_4us__plusi__y",
+      "delay_us": 4,
+      "eigenvalue": 1,
+      "fidelity": 0.302734375,
+      "mode": "delay_4us",
+      "shots": 512,
+      "state": "+i",
+      "successes": 155
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.3539198743352174,
+      "ci95_low": 0.27387274156086344,
+      "circuit": "klt002__delay_4us__minusi__y",
+      "delay_us": 4,
+      "eigenvalue": -1,
+      "fidelity": 0.3125,
+      "mode": "delay_4us",
+      "shots": 512,
+      "state": "-i",
+      "successes": 160
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.6885495797366248,
+      "ci95_low": 0.6061145993456445,
+      "circuit": "klt002__delay_8us__0__z",
+      "delay_us": 8,
+      "eigenvalue": 1,
+      "fidelity": 0.6484375,
+      "mode": "delay_8us",
+      "shots": 512,
+      "state": "0",
+      "successes": 332
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.7054981626663193,
+      "ci95_low": 0.6240604586756924,
+      "circuit": "klt002__delay_8us__1__z",
+      "delay_us": 8,
+      "eigenvalue": -1,
+      "fidelity": 0.666015625,
+      "mode": "delay_8us",
+      "shots": 512,
+      "state": "1",
+      "successes": 341
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.4038289416854145,
+      "ci95_low": 0.3208926804877287,
+      "circuit": "klt002__delay_8us__plus__x",
+      "delay_us": 8,
+      "eigenvalue": 1,
+      "fidelity": 0.361328125,
+      "mode": "delay_8us",
+      "shots": 512,
+      "state": "+",
+      "successes": 185
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.4295967579814415,
+      "ci95_low": 0.3455279474557741,
+      "circuit": "klt002__delay_8us__minus__x",
+      "delay_us": 8,
+      "eigenvalue": -1,
+      "fidelity": 0.38671875,
+      "mode": "delay_8us",
+      "shots": 512,
+      "state": "-",
+      "successes": 198
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.37993287008633403,
+      "ci95_low": 0.2982628290738192,
+      "circuit": "klt002__delay_8us__plusi__y",
+      "delay_us": 8,
+      "eigenvalue": 1,
+      "fidelity": 0.337890625,
+      "mode": "delay_8us",
+      "shots": 512,
+      "state": "+i",
+      "successes": 173
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.4078011864278979,
+      "ci95_low": 0.3246747562474102,
+      "circuit": "klt002__delay_8us__minusi__y",
+      "delay_us": 8,
+      "eigenvalue": -1,
+      "fidelity": 0.365234375,
+      "mode": "delay_8us",
+      "shots": 512,
+      "state": "-i",
+      "successes": 187
+    }
+  ],
+  "protocol_id": "KLT-002",
+  "protocol_version": "1.0.0",
+  "summary": [
+    {
+      "ci95_high": 0.9970703125,
+      "ci95_low": 0.9921875,
+      "mean_fidelity": 0.9947916666666666,
+      "mode": "direct",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.7646484375,
+      "ci95_low": 0.7356770833333334,
+      "mean_fidelity": 0.7503255208333334,
+      "mode": "none",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.6946614583333334,
+      "ci95_low": 0.6640625,
+      "mean_fidelity": 0.6793619791666666,
+      "mode": "x_only",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.6930338541666666,
+      "ci95_low": 0.6627604166666666,
+      "mean_fidelity": 0.6780598958333334,
+      "mode": "z_only",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.6946614583333334,
+      "ci95_low": 0.6643880208333334,
+      "mean_fidelity": 0.6796875,
+      "mode": "both",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.6962890625,
+      "ci95_low": 0.666015625,
+      "mean_fidelity": 0.6809895833333334,
+      "mode": "conditional_shadow",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.6536458333333334,
+      "ci95_low": 0.6197916666666666,
+      "mean_fidelity": 0.63671875,
+      "mode": "delay_2us",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.4912109375,
+      "ci95_low": 0.4573567708333333,
+      "mean_fidelity": 0.4742838541666667,
+      "mode": "delay_4us",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.4778645833333333,
+      "ci95_low": 0.4440104166666667,
+      "mean_fidelity": 0.4609375,
+      "mode": "delay_8us",
+      "shots_per_state": [
+        512
+      ]
+    }
+  ]
+}

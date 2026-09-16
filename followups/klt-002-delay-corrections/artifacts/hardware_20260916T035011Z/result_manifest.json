@@ -1,0 +1,100 @@
+{
+  "backend": "ibm_kingston",
+  "completed_at": "20260916T035027Z",
+  "final_status": "DONE",
+  "ibm_quantum_seconds": 10,
+  "instance": "QEC",
+  "job_id": "dal13ss62pvc739q7gig",
+  "max_qpu_seconds": 20,
+  "physical_qubits": [
+    147,
+    148,
+    149
+  ],
+  "scheduler_timing_requested": true,
+  "shots": 512,
+  "submitted_at": "20260916T035012Z",
+  "summary": [
+    {
+      "ci95_high": 0.9970703125,
+      "ci95_low": 0.9921875,
+      "mean_fidelity": 0.9947916666666666,
+      "mode": "direct",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.7646484375,
+      "ci95_low": 0.7356770833333334,
+      "mean_fidelity": 0.7503255208333334,
+      "mode": "none",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.6946614583333334,
+      "ci95_low": 0.6640625,
+      "mean_fidelity": 0.6793619791666666,
+      "mode": "x_only",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.6930338541666666,
+      "ci95_low": 0.6627604166666666,
+      "mean_fidelity": 0.6780598958333334,
+      "mode": "z_only",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.6946614583333334,
+      "ci95_low": 0.6643880208333334,
+      "mean_fidelity": 0.6796875,
+      "mode": "both",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.6962890625,
+      "ci95_low": 0.666015625,
+      "mean_fidelity": 0.6809895833333334,
+      "mode": "conditional_shadow",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.6536458333333334,
+      "ci95_low": 0.6197916666666666,
+      "mean_fidelity": 0.63671875,
+      "mode": "delay_2us",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.4912109375,
+      "ci95_low": 0.4573567708333333,
+      "mean_fidelity": 0.4742838541666667,
+      "mode": "delay_4us",
+      "shots_per_state": [
+        512
+      ]
+    },
+    {
+      "ci95_high": 0.4778645833333333,
+      "ci95_low": 0.4440104166666667,
+      "mean_fidelity": 0.4609375,
+      "mode": "delay_8us",
+      "shots_per_state": [
+        512
+      ]
+    }
+  ]
+}

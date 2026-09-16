@@ -12,7 +12,8 @@ from .followup_workflow import (
     run_followup_hardware,
     simulate_followup,
 )
-from .verification import verify_results
+from .followup_reporting import build_followup_report_artifacts
+from .verification import verify_followup_results, verify_results
 from .workflow import (
     HARD_MAX_QPU_SECONDS,
     preflight,
@@ -135,6 +136,27 @@ def build_parser() -> argparse.ArgumentParser:
         "verify-results", help="offline integrity and result regeneration audit"
     )
     verify.add_argument("--repo-root", type=Path, default=Path("."))
+    verify_followup = subparsers.add_parser(
+        "verify-followup", help="offline KLT-002 integrity and regeneration audit"
+    )
+    verify_followup.add_argument("--repo-root", type=Path, default=Path("."))
+    verify_followup.add_argument("--run-dir", type=Path)
+    report_followup = subparsers.add_parser(
+        "report-followup", help="build KLT-002 derived timing table and figure"
+    )
+    report_followup.add_argument(
+        "--run-dir",
+        type=Path,
+        default=Path(
+            "followups/klt-002-delay-corrections/artifacts/"
+            "hardware_20260916T035011Z"
+        ),
+    )
+    report_followup.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path("followups/klt-002-delay-corrections/derived"),
+    )
     return parser
 
 
@@ -224,6 +246,17 @@ def main() -> None:
             f"Verified {result['files_verified']} files, exact analysis "
             f"regeneration, and {result['total_qpu_seconds']} total QPU seconds."
         )
+    elif args.command == "verify-followup":
+        result = verify_followup_results(args.repo_root, args.run_dir)
+        print(
+            f"Verified KLT-002 job {result['job_id']}: "
+            f"{result['files_verified']} files, {result['circuits']} circuits, "
+            f"{result['scheduler_timing_records']} timing records, and "
+            f"{result['qpu_seconds']} QPU seconds."
+        )
+    elif args.command == "report-followup":
+        output_dir = build_followup_report_artifacts(args.run_dir, args.output_dir)
+        print(f"KLT-002 derived report artifacts written to: {output_dir}")
 
 
 if __name__ == "__main__":

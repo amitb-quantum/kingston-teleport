@@ -2,3 +2,4 @@ results/kingston-2026-09-15/** text eol=lf
 results/kingston-2026-09-15/**/*.png -text
 followups/** text eol=lf
 followups/**/*.qpy -text
+followups/**/*.png -text

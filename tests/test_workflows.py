@@ -9,7 +9,11 @@ from kingston_live_teleportation.followup_workflow import (
     run_followup_hardware,
     validate_followup_budget,
 )
-from kingston_live_teleportation.verification import verify_results
+from kingston_live_teleportation.followup_reporting import summarize_scheduler_timing
+from kingston_live_teleportation.verification import (
+    verify_followup_results,
+    verify_results,
+)
 from kingston_live_teleportation.workflow import _extract_counts
 from kingston_live_teleportation.replication import (
     ChainCalibration,
@@ -80,6 +84,44 @@ def test_published_bundle_verifies_fully_offline():
     assert result["status"] == "verified"
     assert result["total_qpu_seconds"] == 13
     assert result["analysis_exactly_regenerated"] is True
+
+
+def test_followup_bundle_verifies_fully_offline():
+    result = verify_followup_results(Path(__file__).parents[1])
+    assert result["status"] == "verified"
+    assert result["job_id"] == "dal13ss62pvc739q7gig"
+    assert result["qpu_seconds"] == 10
+    assert result["circuits"] == result["scheduler_timing_records"] == 54
+
+
+def test_scheduler_summary_recovers_exact_branch_and_delay_increments():
+    root = Path(__file__).parents[1]
+    run_dir = (
+        root
+        / "followups"
+        / "klt-002-delay-corrections"
+        / "artifacts"
+        / "hardware_20260916T035011Z"
+    )
+    import json
+
+    metadata = json.loads(
+        (run_dir / "scheduler_timing_metadata.json").read_text(encoding="utf-8")
+    )
+    rows = summarize_scheduler_timing(
+        metadata, dt_seconds=4e-9, output_qubit=149
+    )
+    by_mode = {row["mode"]: row for row in rows}
+    assert by_mode["x_only"]["increment_vs_none_us"] == pytest.approx(0.536)
+    assert by_mode["z_only"]["increment_vs_none_us"] == pytest.approx(0.548)
+    assert by_mode["both"]["increment_vs_none_us"] == pytest.approx(0.768)
+    assert by_mode["conditional_shadow"]["increment_vs_none_us"] == pytest.approx(
+        0.624
+    )
+    for delay in (2, 4, 8):
+        assert by_mode[f"delay_{delay}us"]["increment_vs_none_us"] == pytest.approx(
+            float(delay)
+        )
 
 
 def test_replication_chain_selection_is_scored_excluded_and_deterministic():

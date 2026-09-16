@@ -180,34 +180,45 @@ The results should be interpreted within the following boundaries:
 - **No quantum advantage claim.** This is a control-path characterization, not
   evidence of useful fault tolerance or computational speedup.
 
-## Preregistered KLT-002 follow-up — hardware not run
+## KLT-002 preregistered follow-up — completed
 
-The repository now contains a frozen, hardware-ready follow-up that separates
+The follow-up separates
 X-only, Z-only, both, and neither correction and adds a two-conditional shadow
 control plus 2, 4, and 8 μs destination delays. Six states across nine modes
-give 54 circuits at 512 shots each.
+gave 54 circuits at 512 shots each. IBM job `dal13ss62pvc739q7gig` completed
+successfully using **10 QPU seconds**.
 
-The delays are deliberately called **latency-bracketing**, not delay-matched.
-The KLT-001 jobs did not request IBM's scheduler-timing metadata, and ordinary
-backend target data do not expose the complete `if_else` latency. KLT-002 is
-estimated at 11.6768 QPU seconds by IBM's quick formula and has a hard 20-second
-cap, but this repository update performs only ideal simulation and a read-only
-preflight. Review these before any separately authorized run:
+X-only, Z-only, both-correction, and conditional-shadow modes all produced
+nearly identical six-state means (`0.6781`–`0.6810`) with high X but weak Y/Z
+fidelity. The shadow was within the preregistered 0.03 margin of both correction
+on every axis. No 2/4/8 μs delay reproduced that channel: the explicit delays
+were qualitatively Z-preserving, while conditional modes were X-preserving.
+
+IBM returned accurate timing for all 54 circuits. For matched `|+⟩` circuits,
+both corrections added about 0.768 μs beyond the no-branch wait, while the
+shadow added 0.624 μs. The smallest explicit delay added exactly 2 μs, so the
+controls correctly bracketed but did not numerically match branch latency.
+
+![KLT-002 mode and axis results](followups/klt-002-delay-corrections/derived/klt002_result_summary.png)
+
+Full design, evidence, and interpretation:
 
 - [`preregistrations/KLT-002_DELAY_CORRECTION_PREREGISTRATION.md`](preregistrations/KLT-002_DELAY_CORRECTION_PREREGISTRATION.md)
+- [`followups/klt-002-delay-corrections/RESULTS.md`](followups/klt-002-delay-corrections/RESULTS.md)
 - [`docs/TIMING_AUDIT.md`](docs/TIMING_AUDIT.md)
 - [`docs/REPLICATION_PROTOCOL.md`](docs/REPLICATION_PROTOCOL.md)
 
 ## QPU usage and safeguards
 
-IBM reported exactly 13 QPU-seconds across three jobs:
+IBM reported exactly **23 cumulative QPU-seconds** across four jobs:
 
 | Job | IBM job ID | QPU seconds |
 |---|---|---:|
 | Preregistered experiment | `daktp8c62pvc739q1t6g` | 7 |
 | Register/correction diagnostic | `daktrsgnf91c73crdckg` | 3 |
 | Conditional-order diagnostic | `daktsvgnf91c73crddrg` | 3 |
-| **Total** | | **13** |
+| KLT-002 correction/timing study | `dal13ss62pvc739q7gig` | 10 |
+| **Total** | | **23** |
 
 The repository protects limited-access accounts in several ways:
 
@@ -235,7 +246,7 @@ cap is authoritative.
 ├── PROVENANCE.md               Protocol IDs, commits, environments, evidence
 ├── CITATION.cff                Citation metadata
 ├── LICENSE                     Apache-2.0 license
-├── preregistrations/           Frozen prospective KLT-002 design
+├── preregistrations/           Frozen KLT-002 design
 ├── docs/                       Timing, direct-control, replication notes
 ├── RESULTS.md                  Narrative result and interpretation
 ├── environment.yml             Reproducible Conda environment
@@ -245,6 +256,7 @@ cap is authoritative.
 │   ├── analysis.py             Fidelity and bootstrap analysis
 │   ├── diagnostics.py          Post-hoc control circuits
 │   ├── followup.py             KLT-002 circuits and scoring
+│   ├── followup_reporting.py   Timing extraction and result visualization
 │   ├── followup_workflow.py    KLT-002 simulation/preflight/gated execution
 │   ├── verification.py         Offline bundle and regeneration verifier
 │   ├── workflow.py             Simulation, preflight, capped submission
@@ -270,6 +282,7 @@ conda env create -f environment.yml
 conda activate kingston-teleport
 pytest
 kingston-teleport verify-results
+kingston-teleport verify-followup
 ```
 
 Run the ideal simulator without contacting IBM hardware:
@@ -304,21 +317,14 @@ Hardware execution requires a separately configured IBM Quantum account and
 may consume limited plan allocation. Reviewing `PREREGISTRATION.md` and a fresh
 preflight artifact before submission is strongly recommended.
 
-Prepare KLT-002 without using QPU time:
+Regenerate and verify KLT-002 without using QPU time or network access:
 
 ```bash
-kingston-teleport simulate-followup
-kingston-teleport preflight-followup \
-  --backend ibm_kingston \
-  --instance QEC \
-  --physical-qubits 147 148 149 \
-  --shots 512 \
-  --max-qpu-seconds 20
+kingston-teleport verify-followup
+kingston-teleport report-followup
 ```
 
-After scientific review and only with explicit authorization, the proposed
-hardware command is the same preflight command with `run-followup` and the
-additional literal `--submit`. There is no automatic retry or resubmission.
+The completed job is not resubmitted by either command.
 
 ## Reproducibility and interpretation
 
@@ -328,6 +334,8 @@ additional literal `--submit`. There is no automatic retry or resubmission.
   curated machine-readable evidence and SHA-256 hashes.
 - [`PROVENANCE.md`](PROVENANCE.md) binds protocol identities to the archival
   commits and documents the required metadata for future artifacts.
+- [`followups/klt-002-delay-corrections/`](followups/klt-002-delay-corrections/)
+  contains KLT-002 raw evidence, exact timing, decisions, and derived outputs.
 
 The principal value of this repository is the separation between three layers:
 the quantum correlations, the live control path, and the cloud service around

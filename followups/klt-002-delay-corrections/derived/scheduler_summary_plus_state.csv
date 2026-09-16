@@ -1,0 +1,10 @@
+mode,state,axis,circuit_duration_dt,circuit_duration_us,mcm_capture_end_dt,output_measure_start_dt,wait_after_mcm_us,increment_vs_none_us
+direct,+,X,2790,11.16,,1139,,
+none,+,X,3205,12.82,1445,1554,0.436,0.0
+x_only,+,X,3339,13.356,1445,1688,0.972,0.536
+z_only,+,X,3342,13.368,1445,1691,0.984,0.548
+both,+,X,3397,13.588,1445,1746,1.204,0.768
+conditional_shadow,+,X,3361,13.444,1445,1710,1.06,0.624
+delay_2us,+,X,3705,14.82,1445,2054,2.436,2.0
+delay_4us,+,X,4205,16.82,1445,2554,4.436,4.0
+delay_8us,+,X,5205,20.82,1445,3554,8.436,8.0

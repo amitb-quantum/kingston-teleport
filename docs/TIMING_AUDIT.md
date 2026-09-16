@@ -39,6 +39,24 @@ metadata. IBM describes scheduler timing as circuit scheduling information;
 it is not the account's billable QPU usage. The result bundle must separately
 retain IBM job metrics and `usage.quantum_seconds`.
 
+## KLT-002 returned timing
+
+The subsequently authorized KLT-002 job returned scheduler timing for all 54
+circuits. With `dt = 4 ns`, the matched `|+⟩` circuits showed the following
+incremental wait from the end of optimized mid-circuit capture to the start of
+q149 readout, relative to the no-branch circuit:
+
+- X-only: 0.536 μs
+- Z-only: 0.548 μs
+- both corrections: 0.768 μs
+- conditional shadow: 0.624 μs
+- explicit delays: exactly 2.000, 4.000, and 8.000 μs
+
+Thus the delays were genuine brackets but were all longer than the observed
+conditional increments. The complete event text remains archived in
+`scheduler_timing_metadata.json`; the reproducible extraction is in
+`followup_reporting.py`. These schedule durations are not billing quantities.
+
 Official IBM references:
 
 - [Retrieve accurate dynamic-circuit timing](https://quantum.cloud.ibm.com/docs/en/guides/qiskit-runtime-circuit-timing)

@@ -18,13 +18,21 @@ manifest itself. `kingston-teleport verify-results` checks that coverage,
 validates all SHA-256 hashes, regenerates `analysis.json` exactly from
 `counts.json`, and checks the three job records without contacting IBM.
 
-## KLT-002 v1.0.0 — preregistered follow-up, not executed
+## KLT-002 v1.0.0 — completed preregistered follow-up
 
 - Frozen design: `preregistrations/KLT-002_DELAY_CORRECTION_PREREGISTRATION.md`
 - Timing audit: `docs/TIMING_AUDIT.md`
 - Code entry points: `followup.py` and `followup_workflow.py`
-- Status at publication: local simulation and read-only IBM preflight only;
-  no KLT-002 QPU submission
+- Hardware bundle:
+  `followups/klt-002-delay-corrections/artifacts/hardware_20260916T035011Z/`
+- IBM job ID: `dal13ss62pvc739q7gig`
+- IBM-reported use: 10 QPU seconds
+- Result: `followups/klt-002-delay-corrections/RESULTS.md`
+
+`kingston-teleport verify-followup` checks all raw artifact hashes, regenerates
+the analysis exactly, confirms the 54 × 512-shot design, validates all 54
+scheduler-timing records, and reconciles the IBM job identity and usage without
+network access.
 
 Each future artifact manifest records the package, Python, Qiskit,
 qiskit-ibm-runtime, Qiskit Aer, operating-system, backend-version, calibration,
