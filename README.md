@@ -208,6 +208,46 @@ Full design, evidence, and interpretation:
 - [`docs/TIMING_AUDIT.md`](docs/TIMING_AUDIT.md)
 - [`docs/REPLICATION_PROTOCOL.md`](docs/REPLICATION_PROTOCOL.md)
 
+## Pre-flight hardware qualification
+
+Before QPU submission, the physical backend/path can be screened with
+[`ibm_backend_path_audit.py`](ibm_backend_path_audit.py), a **zero-QPU**
+calibration, topology, and stability audit. The selector evaluates candidate
+connected paths using the current calibration together with a configurable
+window of historical snapshots rather than relying on a single instantaneous
+backend reading.
+
+The audit records and scores quantities relevant to path quality—including T1,
+T2, readout error, native two-qubit-gate error, temporal variability, and
+latest-vs-history excursions. Circuit-shape profiles (`storage`, `gates`, and
+`balanced`) make the ranking sensitive to the expected workload instead of
+using one fixed heuristic. It also persists normalized/raw calibration
+snapshots for offline replay, emits full path rankings and SHA-256 manifests,
+and can compare selector stability across runs.
+
+An optional compile preflight locks Qiskit's initial layout to the selected
+physical path and reports routing/SWAP overhead before hardware execution. A
+robust audit pass is deliberately **not** treated as authorization to submit a
+job: the script makes no Runtime primitive call and consumes no QPU time.
+
+Example:
+
+```bash
+python ibm_backend_path_audit.py \
+  --backends ibm_fez ibm_kingston \
+  --history-days 5 \
+  --history-step-hours 12 \
+  --history-fixed-n 8 \
+  --profile gates \
+  --compile-preflight \
+  --output-dir backend_audit
+```
+
+This qualification layer helps separate **hardware/path selection risk** from
+the later experimental question about live feed-forward behavior. Its
+calibration metrics remain local device descriptors: they do not measure
+crosstalk or establish a microscopic noise mechanism.
+
 ## QPU usage and safeguards
 
 IBM reported exactly **23 cumulative QPU-seconds** across four jobs:
@@ -246,6 +286,7 @@ cap is authoritative.
 ├── PROVENANCE.md               Protocol IDs, commits, environments, evidence
 ├── CITATION.cff                Citation metadata
 ├── LICENSE                     Apache-2.0 license
+├── ibm_backend_path_audit.py   Zero-QPU calibration/topology path qualifier
 ├── preregistrations/           Frozen KLT-002 design
 ├── docs/                       Timing, direct-control, replication notes
 ├── RESULTS.md                  Narrative result and interpretation
