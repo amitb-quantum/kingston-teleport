@@ -25,6 +25,8 @@ validates all SHA-256 hashes, regenerates `analysis.json` exactly from
 - Code entry points: `followup.py` and `followup_workflow.py`
 - Hardware bundle:
   `followups/klt-002-delay-corrections/artifacts/hardware_20260916T035011Z/`
+- First repository commit containing the complete raw bundle, exact analysis,
+  timing derivation, and interpretation: `22635ad`
 - IBM job ID: `dal13ss62pvc739q7gig`
 - IBM-reported use: 10 QPU seconds
 - Result: `followups/klt-002-delay-corrections/RESULTS.md`
