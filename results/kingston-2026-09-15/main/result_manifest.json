@@ -1,0 +1,71 @@
+{
+  "backend": "ibm_kingston",
+  "completed_at": "20260916T000757Z",
+  "contrasts": {
+    "dynamic_minus_offline": -0.29378255208333337,
+    "dynamic_minus_uncorrected": 0.15559895833333326
+  },
+  "final_status": "DONE",
+  "ibm_quantum_seconds": 7,
+  "instance": "QEC",
+  "job_id": "daktp8c62pvc739q1t6g",
+  "max_qpu_seconds": 25,
+  "physical_qubits": [
+    147,
+    148,
+    149
+  ],
+  "shots": 1024,
+  "status_at_save": "QUEUED",
+  "submitted_at": "20260916T000241Z",
+  "summary": [
+    {
+      "above_classical_by_point_estimate": true,
+      "ci95_high": 0.99560546875,
+      "ci95_low": 0.9915364583333334,
+      "ci_excludes_classical_threshold": true,
+      "estimator": "direct",
+      "mean_fidelity": 0.99365234375,
+      "shots_per_state": [
+        1024
+      ],
+      "states": 6
+    },
+    {
+      "above_classical_by_point_estimate": false,
+      "ci95_high": 0.6682942708333334,
+      "ci95_low": 0.646484375,
+      "ci_excludes_classical_threshold": false,
+      "estimator": "dynamic",
+      "mean_fidelity": 0.6573893229166666,
+      "shots_per_state": [
+        1024
+      ],
+      "states": 6
+    },
+    {
+      "above_classical_by_point_estimate": false,
+      "ci95_high": 0.5143229166666666,
+      "ci95_low": 0.48941650390625,
+      "ci_excludes_classical_threshold": false,
+      "estimator": "uncorrected",
+      "mean_fidelity": 0.5017903645833334,
+      "shots_per_state": [
+        1024
+      ],
+      "states": 6
+    },
+    {
+      "above_classical_by_point_estimate": true,
+      "ci95_high": 0.9563802083333334,
+      "ci95_low": 0.9456380208333334,
+      "ci_excludes_classical_threshold": true,
+      "estimator": "offline",
+      "mean_fidelity": 0.951171875,
+      "shots_per_state": [
+        1024
+      ],
+      "states": 6
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "backend": "ibm_kingston",
+  "estimated_seconds_with_control_flow_allowance": 1.0343137279999999,
+  "final_status": "DONE",
+  "ibm_quantum_seconds": 3,
+  "instance": "QEC",
+  "job_id": "daktrsgnf91c73crdckg",
+  "kind": "exploratory_register_correction_diagnostic",
+  "max_qpu_seconds": 8,
+  "physical_qubits": [
+    147,
+    148,
+    149
+  ],
+  "results": [
+    {
+      "agreement": 1.0,
+      "correction": "X",
+      "name": "diagnostic__m0_to_x",
+      "shots": 512,
+      "source": "m0",
+      "successes": 512
+    },
+    {
+      "agreement": 0.982421875,
+      "correction": "Z",
+      "name": "diagnostic__m0_to_z",
+      "shots": 512,
+      "source": "m0",
+      "successes": 503
+    },
+    {
+      "agreement": 0.99609375,
+      "correction": "X",
+      "name": "diagnostic__m1_to_x",
+      "shots": 512,
+      "source": "m1",
+      "successes": 510
+    },
+    {
+      "agreement": 0.990234375,
+      "correction": "Z",
+      "name": "diagnostic__m1_to_z",
+      "shots": 512,
+      "source": "m1",
+      "successes": 507
+    }
+  ],
+  "shots": 512,
+  "submitted_at": "20260916T000818Z"
+}

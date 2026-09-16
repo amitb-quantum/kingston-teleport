@@ -1,0 +1,17 @@
+{
+  "bss": {
+    "seconds": 3
+  },
+  "caller": "qiskit_ibm_runtime~sampler.py",
+  "qiskit_version": "qiskit_ibm_runtime-0.47.0,qiskit-2.5.2*,qiskit_aer-0.17.2",
+  "timestamps": {
+    "created": "2026-09-16T00:10:38.320345Z",
+    "finished": "2026-09-16T00:10:43.761212Z",
+    "running": "2026-09-16T00:10:39.33994Z"
+  },
+  "usage": {
+    "quantum_seconds": 3,
+    "seconds": 3,
+    "status": "complete"
+  }
+}

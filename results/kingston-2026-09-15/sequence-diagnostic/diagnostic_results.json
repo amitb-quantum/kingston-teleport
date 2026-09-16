@@ -1,0 +1,38 @@
+[
+  {
+    "agreement": 0.982421875,
+    "expected_from": "m0",
+    "measurement_basis": "X",
+    "name": "sequence__xz__measure_x",
+    "order": "XZ",
+    "shots": 512,
+    "successes": 503
+  },
+  {
+    "agreement": 0.994140625,
+    "expected_from": "m1",
+    "measurement_basis": "Z",
+    "name": "sequence__xz__measure_z",
+    "order": "XZ",
+    "shots": 512,
+    "successes": 509
+  },
+  {
+    "agreement": 0.96875,
+    "expected_from": "m0",
+    "measurement_basis": "X",
+    "name": "sequence__zx__measure_x",
+    "order": "ZX",
+    "shots": 512,
+    "successes": 496
+  },
+  {
+    "agreement": 0.994140625,
+    "expected_from": "m1",
+    "measurement_basis": "Z",
+    "name": "sequence__zx__measure_z",
+    "order": "ZX",
+    "shots": 512,
+    "successes": 509
+  }
+]

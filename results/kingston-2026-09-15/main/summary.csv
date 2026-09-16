@@ -1,0 +1,5 @@
+estimator,mean_fidelity,ci95_low,ci95_high,states,shots_per_state,above_classical_by_point_estimate,ci_excludes_classical_threshold
+direct,0.99365234375,0.9915364583333334,0.99560546875,6,[1024],True,True
+dynamic,0.6573893229166666,0.646484375,0.6682942708333334,6,[1024],False,False
+uncorrected,0.5017903645833334,0.48941650390625,0.5143229166666666,6,[1024],False,False
+offline,0.951171875,0.9456380208333334,0.9563802083333334,6,[1024],True,True

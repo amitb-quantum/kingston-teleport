@@ -1,0 +1,463 @@
+{
+  "axis_summary": [
+    {
+      "axis": "X",
+      "estimator": "direct",
+      "mean_fidelity": 0.99462890625,
+      "pauli_transfer_diagonal": 0.9892578125,
+      "states": 2
+    },
+    {
+      "axis": "Y",
+      "estimator": "direct",
+      "mean_fidelity": 0.9921875,
+      "pauli_transfer_diagonal": 0.984375,
+      "states": 2
+    },
+    {
+      "axis": "Z",
+      "estimator": "direct",
+      "mean_fidelity": 0.994140625,
+      "pauli_transfer_diagonal": 0.98828125,
+      "states": 2
+    },
+    {
+      "axis": "X",
+      "estimator": "dynamic",
+      "mean_fidelity": 0.93310546875,
+      "pauli_transfer_diagonal": 0.8662109375,
+      "states": 2
+    },
+    {
+      "axis": "Y",
+      "estimator": "dynamic",
+      "mean_fidelity": 0.52490234375,
+      "pauli_transfer_diagonal": 0.0498046875,
+      "states": 2
+    },
+    {
+      "axis": "Z",
+      "estimator": "dynamic",
+      "mean_fidelity": 0.51416015625,
+      "pauli_transfer_diagonal": 0.0283203125,
+      "states": 2
+    },
+    {
+      "axis": "X",
+      "estimator": "uncorrected",
+      "mean_fidelity": 0.50341796875,
+      "pauli_transfer_diagonal": 0.0068359375,
+      "states": 2
+    },
+    {
+      "axis": "Y",
+      "estimator": "uncorrected",
+      "mean_fidelity": 0.490234375,
+      "pauli_transfer_diagonal": -0.01953125,
+      "states": 2
+    },
+    {
+      "axis": "Z",
+      "estimator": "uncorrected",
+      "mean_fidelity": 0.51171875,
+      "pauli_transfer_diagonal": 0.0234375,
+      "states": 2
+    },
+    {
+      "axis": "X",
+      "estimator": "offline",
+      "mean_fidelity": 0.9453125,
+      "pauli_transfer_diagonal": 0.890625,
+      "states": 2
+    },
+    {
+      "axis": "Y",
+      "estimator": "offline",
+      "mean_fidelity": 0.9375,
+      "pauli_transfer_diagonal": 0.875,
+      "states": 2
+    },
+    {
+      "axis": "Z",
+      "estimator": "offline",
+      "mean_fidelity": 0.970703125,
+      "pauli_transfer_diagonal": 0.94140625,
+      "states": 2
+    }
+  ],
+  "bootstrap": {
+    "draws": 20000,
+    "seed": 240915
+  },
+  "contrasts": {
+    "dynamic_minus_offline": -0.29378255208333337,
+    "dynamic_minus_uncorrected": 0.15559895833333326
+  },
+  "per_state": [
+    {
+      "axis": "Z",
+      "ci95_high": 0.9979126050258261,
+      "ci95_low": 0.9886208640204847,
+      "circuit": "direct__0__z",
+      "eigenvalue": 1,
+      "estimator": "direct",
+      "fidelity": 0.9951171875,
+      "mode": "direct",
+      "shots": 1024,
+      "state": "0",
+      "successes": 1019
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.9966847907284901,
+      "ci95_low": 0.9859570275523519,
+      "circuit": "direct__1__z",
+      "eigenvalue": -1,
+      "estimator": "direct",
+      "fidelity": 0.9931640625,
+      "mode": "direct",
+      "shots": 1024,
+      "state": "1",
+      "successes": 1017
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.99731191112497,
+      "ci95_low": 0.9872757325386063,
+      "circuit": "direct__plus__x",
+      "eigenvalue": 1,
+      "estimator": "direct",
+      "fidelity": 0.994140625,
+      "mode": "direct",
+      "shots": 1024,
+      "state": "+",
+      "successes": 1018
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9979126050258261,
+      "ci95_low": 0.9886208640204847,
+      "circuit": "direct__minus__x",
+      "eigenvalue": -1,
+      "estimator": "direct",
+      "fidelity": 0.9951171875,
+      "mode": "direct",
+      "shots": 1024,
+      "state": "-",
+      "successes": 1019
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.9939912877054226,
+      "ci95_low": 0.9808672290444821,
+      "circuit": "direct__plusi__y",
+      "eigenvalue": 1,
+      "estimator": "direct",
+      "fidelity": 0.9892578125,
+      "mode": "direct",
+      "shots": 1024,
+      "state": "+i",
+      "successes": 1013
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.9979126050258261,
+      "ci95_low": 0.9886208640204847,
+      "circuit": "direct__minusi__y",
+      "eigenvalue": -1,
+      "estimator": "direct",
+      "fidelity": 0.9951171875,
+      "mode": "direct",
+      "shots": 1024,
+      "state": "-i",
+      "successes": 1019
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.5645478636332105,
+      "ci95_low": 0.5035560247624914,
+      "circuit": "dynamic__0__z",
+      "eigenvalue": 1,
+      "estimator": "dynamic",
+      "fidelity": 0.5341796875,
+      "mode": "dynamic",
+      "shots": 1024,
+      "state": "0",
+      "successes": 547
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.5247275884841404,
+      "ci95_low": 0.4635974592194535,
+      "circuit": "dynamic__1__z",
+      "eigenvalue": -1,
+      "estimator": "dynamic",
+      "fidelity": 0.494140625,
+      "mode": "dynamic",
+      "shots": 1024,
+      "state": "1",
+      "successes": 506
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.942920354269772,
+      "ci95_low": 0.9112969887506036,
+      "circuit": "dynamic__plus__x",
+      "eigenvalue": 1,
+      "estimator": "dynamic",
+      "fidelity": 0.9287109375,
+      "mode": "dynamic",
+      "shots": 1024,
+      "state": "+",
+      "successes": 951
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9507532072173871,
+      "ci95_low": 0.9209765642475974,
+      "circuit": "dynamic__minus__x",
+      "eigenvalue": -1,
+      "estimator": "dynamic",
+      "fidelity": 0.9375,
+      "mode": "dynamic",
+      "shots": 1024,
+      "state": "-",
+      "successes": 960
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.5548536487384962,
+      "ci95_low": 0.4937919858298624,
+      "circuit": "dynamic__plusi__y",
+      "eigenvalue": 1,
+      "estimator": "dynamic",
+      "fidelity": 0.5244140625,
+      "mode": "dynamic",
+      "shots": 1024,
+      "state": "+i",
+      "successes": 537
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.555823595460866,
+      "ci95_low": 0.4947678644902268,
+      "circuit": "dynamic__minusi__y",
+      "eigenvalue": -1,
+      "estimator": "dynamic",
+      "fidelity": 0.525390625,
+      "mode": "dynamic",
+      "shots": 1024,
+      "state": "-i",
+      "successes": 538
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.5664853041825795,
+      "ci95_low": 0.5055102349785912,
+      "circuit": "uncorrected__0__z",
+      "eigenvalue": 1,
+      "estimator": "uncorrected",
+      "fidelity": 0.5361328125,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "0",
+      "successes": 549
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.9826147280773132,
+      "ci95_low": 0.9630564079315764,
+      "circuit": "uncorrected__0__z",
+      "eigenvalue": 1,
+      "estimator": "offline",
+      "fidelity": 0.974609375,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "0",
+      "successes": 998
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.5179094729243505,
+      "ci95_low": 0.45679479710010296,
+      "circuit": "uncorrected__1__z",
+      "eigenvalue": -1,
+      "estimator": "uncorrected",
+      "fidelity": 0.4873046875,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "1",
+      "successes": 499
+    },
+    {
+      "axis": "Z",
+      "ci95_high": 0.9761435630906757,
+      "ci95_low": 0.953960969856339,
+      "circuit": "uncorrected__1__z",
+      "eigenvalue": -1,
+      "estimator": "offline",
+      "fidelity": 0.966796875,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "1",
+      "successes": 990
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.5529134055747194,
+      "ci95_low": 0.49184057822817057,
+      "circuit": "uncorrected__plus__x",
+      "eigenvalue": 1,
+      "estimator": "uncorrected",
+      "fidelity": 0.5224609375,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "+",
+      "successes": 535
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9644640144573211,
+      "ci95_low": 0.9383989631314129,
+      "circuit": "uncorrected__plus__x",
+      "eigenvalue": 1,
+      "estimator": "offline",
+      "fidelity": 0.953125,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "+",
+      "successes": 976
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.5149856794723082,
+      "ci95_low": 0.4538811144039422,
+      "circuit": "uncorrected__minus__x",
+      "eigenvalue": -1,
+      "estimator": "uncorrected",
+      "fidelity": 0.484375,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "-",
+      "successes": 496
+    },
+    {
+      "axis": "X",
+      "ci95_high": 0.9507532072173871,
+      "ci95_low": 0.9209765642475974,
+      "circuit": "uncorrected__minus__x",
+      "eigenvalue": -1,
+      "estimator": "offline",
+      "fidelity": 0.9375,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "-",
+      "successes": 960
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.5208322198415086,
+      "ci95_low": 0.45970952633114787,
+      "circuit": "uncorrected__plusi__y",
+      "eigenvalue": 1,
+      "estimator": "uncorrected",
+      "fidelity": 0.490234375,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "+i",
+      "successes": 502
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.9455394746848769,
+      "ci95_low": 0.9145153444837018,
+      "circuit": "uncorrected__plusi__y",
+      "eigenvalue": 1,
+      "estimator": "offline",
+      "fidelity": 0.931640625,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "+i",
+      "successes": 954
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.5208322198415086,
+      "ci95_low": 0.45970952633114787,
+      "circuit": "uncorrected__minusi__y",
+      "eigenvalue": -1,
+      "estimator": "uncorrected",
+      "fidelity": 0.490234375,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "-i",
+      "successes": 502
+    },
+    {
+      "axis": "Y",
+      "ci95_high": 0.9559306576865962,
+      "ci95_low": 0.9274740660747944,
+      "circuit": "uncorrected__minusi__y",
+      "eigenvalue": -1,
+      "estimator": "offline",
+      "fidelity": 0.943359375,
+      "mode": "uncorrected",
+      "shots": 1024,
+      "state": "-i",
+      "successes": 966
+    }
+  ],
+  "summary": [
+    {
+      "above_classical_by_point_estimate": true,
+      "ci95_high": 0.99560546875,
+      "ci95_low": 0.9915364583333334,
+      "ci_excludes_classical_threshold": true,
+      "estimator": "direct",
+      "mean_fidelity": 0.99365234375,
+      "shots_per_state": [
+        1024
+      ],
+      "states": 6
+    },
+    {
+      "above_classical_by_point_estimate": false,
+      "ci95_high": 0.6682942708333334,
+      "ci95_low": 0.646484375,
+      "ci_excludes_classical_threshold": false,
+      "estimator": "dynamic",
+      "mean_fidelity": 0.6573893229166666,
+      "shots_per_state": [
+        1024
+      ],
+      "states": 6
+    },
+    {
+      "above_classical_by_point_estimate": false,
+      "ci95_high": 0.5143229166666666,
+      "ci95_low": 0.48941650390625,
+      "ci_excludes_classical_threshold": false,
+      "estimator": "uncorrected",
+      "mean_fidelity": 0.5017903645833334,
+      "shots_per_state": [
+        1024
+      ],
+      "states": 6
+    },
+    {
+      "above_classical_by_point_estimate": true,
+      "ci95_high": 0.9563802083333334,
+      "ci95_low": 0.9456380208333334,
+      "ci_excludes_classical_threshold": true,
+      "estimator": "offline",
+      "mean_fidelity": 0.951171875,
+      "shots_per_state": [
+        1024
+      ],
+      "states": 6
+    }
+  ],
+  "threshold": {
+    "classical_teleportation_fidelity": 0.6666666666666666
+  }
+}

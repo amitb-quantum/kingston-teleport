@@ -1,0 +1,34 @@
+[
+  {
+    "agreement": 1.0,
+    "correction": "X",
+    "name": "diagnostic__m0_to_x",
+    "shots": 512,
+    "source": "m0",
+    "successes": 512
+  },
+  {
+    "agreement": 0.982421875,
+    "correction": "Z",
+    "name": "diagnostic__m0_to_z",
+    "shots": 512,
+    "source": "m0",
+    "successes": 503
+  },
+  {
+    "agreement": 0.99609375,
+    "correction": "X",
+    "name": "diagnostic__m1_to_x",
+    "shots": 512,
+    "source": "m1",
+    "successes": 510
+  },
+  {
+    "agreement": 0.990234375,
+    "correction": "Z",
+    "name": "diagnostic__m1_to_z",
+    "shots": 512,
+    "source": "m1",
+    "successes": 507
+  }
+]

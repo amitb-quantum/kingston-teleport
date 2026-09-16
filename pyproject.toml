@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kingston-live-teleportation"
+version = "0.1.0"
+description = "Budget-capped dynamic quantum teleportation benchmark for IBM Kingston"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "qiskit~=2.5.2",
+  "qiskit-ibm-runtime~=0.47.0",
+  "qiskit-aer~=0.17.2",
+  "numpy~=2.5",
+  "scipy~=1.18",
+  "pandas~=2.3",
+  "matplotlib~=3.11",
+]
+
+[project.optional-dependencies]
+dev = ["pytest~=8.4"]
+
+[project.scripts]
+kingston-teleport = "kingston_live_teleportation.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

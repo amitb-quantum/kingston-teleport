@@ -1,0 +1,280 @@
+{
+  "backend": "ibm_kingston",
+  "backend_version": "1.0.0",
+  "calibration_last_update": "2026-09-15 16:20:53-07:00",
+  "circuit_metrics": [
+    {
+      "depth": 1,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.18e-06,
+      "name": "direct__0__z",
+      "operations": {
+        "measure": 1
+      },
+      "size": 1
+    },
+    {
+      "depth": 2,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.2119999999999997e-06,
+      "name": "direct__1__z",
+      "operations": {
+        "measure": 1,
+        "x": 1
+      },
+      "size": 2
+    },
+    {
+      "depth": 1,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.18e-06,
+      "name": "direct__plus__x",
+      "operations": {
+        "measure": 1
+      },
+      "size": 1
+    },
+    {
+      "depth": 2,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.2119999999999997e-06,
+      "name": "direct__minus__x",
+      "operations": {
+        "measure": 1,
+        "x": 1
+      },
+      "size": 2
+    },
+    {
+      "depth": 1,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.18e-06,
+      "name": "direct__plusi__y",
+      "operations": {
+        "measure": 1
+      },
+      "size": 1
+    },
+    {
+      "depth": 2,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.2119999999999997e-06,
+      "name": "direct__minusi__y",
+      "operations": {
+        "measure": 1,
+        "x": 1
+      },
+      "size": 2
+    },
+    {
+      "depth": 15,
+      "duration_estimation_method": "serial_sum_plus_500us_per_if_else",
+      "estimated_duration_seconds_per_shot": 0.0010052680000000001,
+      "name": "dynamic__0__z",
+      "operations": {
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 25
+    },
+    {
+      "depth": 15,
+      "duration_estimation_method": "serial_sum_plus_500us_per_if_else",
+      "estimated_duration_seconds_per_shot": 0.0010053000000000002,
+      "name": "dynamic__1__z",
+      "operations": {
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6,
+        "x": 1
+      },
+      "size": 26
+    },
+    {
+      "depth": 18,
+      "duration_estimation_method": "serial_sum_plus_500us_per_if_else",
+      "estimated_duration_seconds_per_shot": 0.0010053320000000003,
+      "name": "dynamic__plus__x",
+      "operations": {
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 31
+    },
+    {
+      "depth": 18,
+      "duration_estimation_method": "serial_sum_plus_500us_per_if_else",
+      "estimated_duration_seconds_per_shot": 0.0010053320000000003,
+      "name": "dynamic__minus__x",
+      "operations": {
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 16,
+        "sx": 8
+      },
+      "size": 31
+    },
+    {
+      "depth": 17,
+      "duration_estimation_method": "serial_sum_plus_500us_per_if_else",
+      "estimated_duration_seconds_per_shot": 0.0010053320000000003,
+      "name": "dynamic__plusi__y",
+      "operations": {
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 15,
+        "sx": 8
+      },
+      "size": 30
+    },
+    {
+      "depth": 17,
+      "duration_estimation_method": "serial_sum_plus_500us_per_if_else",
+      "estimated_duration_seconds_per_shot": 0.0010053320000000003,
+      "name": "dynamic__minusi__y",
+      "operations": {
+        "cz": 2,
+        "if_else": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 14,
+        "sx": 8
+      },
+      "size": 29
+    },
+    {
+      "depth": 12,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.312e-06,
+      "name": "uncorrected__0__z",
+      "operations": {
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 23
+    },
+    {
+      "depth": 12,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.312e-06,
+      "name": "uncorrected__1__z",
+      "operations": {
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6,
+        "x": 1
+      },
+      "size": 24
+    },
+    {
+      "depth": 12,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.2799999999999998e-06,
+      "name": "uncorrected__plus__x",
+      "operations": {
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 23
+    },
+    {
+      "depth": 12,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.2799999999999998e-06,
+      "name": "uncorrected__minus__x",
+      "operations": {
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 12,
+        "sx": 6
+      },
+      "size": 23
+    },
+    {
+      "depth": 12,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.312e-06,
+      "name": "uncorrected__plusi__y",
+      "operations": {
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 14,
+        "sx": 7
+      },
+      "size": 26
+    },
+    {
+      "depth": 12,
+      "duration_estimation_method": "qiskit_target_critical_path",
+      "estimated_duration_seconds_per_shot": 2.312e-06,
+      "name": "uncorrected__minusi__y",
+      "operations": {
+        "cz": 2,
+        "measure": 1,
+        "measure_2": 2,
+        "rz": 13,
+        "sx": 7
+      },
+      "size": 25
+    }
+  ],
+  "control_flow_allowance_seconds_per_if_else": 0.0005,
+  "estimated_raw_circuit_seconds": 6.204293120000002,
+  "instance": "QEC",
+  "kind": "live_preflight_no_submission",
+  "operational": true,
+  "pending_jobs": 0,
+  "physical_circuit_count": 18,
+  "physical_qubits": [
+    147,
+    148,
+    149
+  ],
+  "preflight_raw_allowance_seconds": 12.5,
+  "processor_type": {
+    "family": "Heron",
+    "revision": "2"
+  },
+  "required_operations": [
+    "cz",
+    "if_else",
+    "measure_2"
+  ],
+  "server_side_max_execution_seconds": 25,
+  "shots": 1024,
+  "software": {
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "project": "0.1.0",
+    "python": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qiskit_ibm_runtime": "0.47.0"
+  },
+  "submission_performed": false,
+  "total_shots": 18432
+}
